@@ -1,0 +1,1185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#09091c">
+  <meta name="description"
+    content="A little piece of forever, even from miles away. A Cherivelle long-distance love experience.">
+  <title>Until We're Together Again — Cherivelle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08091b;
+      --bg2: #11112c;
+      --ink: #f7f2ff;
+      --muted: #b9b4d5;
+      --lav: #c7a7ff;
+      --blue: #91c8ff;
+      --line: #ffffff20;
+      --glass: #ffffff0b;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'DM Sans', sans-serif
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at 50% 0%, #282054 0, transparent 48%), radial-gradient(ellipse at 100% 40%, #10254b55, transparent 35%), var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      overflow-x: hidden
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      cursor: pointer
+    }
+
+    .stars,
+    .stars:before,
+    .stars:after {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      content: "";
+      z-index: 0;
+      background-image: radial-gradient(1px 1px at 10% 20%, #fff 98%, transparent), radial-gradient(1px 1px at 80% 12%, #c9d7ff 98%, transparent), radial-gradient(2px 2px at 44% 70%, #fff 98%, transparent), radial-gradient(1px 1px at 90% 85%, #fff 98%, transparent), radial-gradient(1px 1px at 25% 90%, #a6baff 98%, transparent);
+      background-size: 390px 390px;
+      opacity: .55;
+      animation: twinkle 7s ease-in-out infinite alternate
+    }
+
+    .stars:before {
+      background-position: 100px 80px;
+      background-size: 530px 530px;
+      opacity: .45
+    }
+
+    .stars:after {
+      background-position: 200px 190px;
+      background-size: 700px 700px;
+      opacity: .3
+    }
+
+    @keyframes twinkle {
+      to {
+        opacity: .85
+      }
+    }
+
+    .orb {
+      position: fixed;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: .12;
+      pointer-events: none;
+      z-index: 0;
+      background: #8d5bff;
+      top: 25%;
+      left: -200px
+    }
+
+    .orb.two {
+      left: auto;
+      right: -220px;
+      top: 65%;
+      background: #429bff
+    }
+
+    .site {
+      position: relative;
+      z-index: 1
+    }
+
+    .nav {
+      width: min(1120px, calc(100% - 40px));
+      margin: auto;
+      padding: 25px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: .17em;
+      font-size: 12px
+    }
+
+    .brand span {
+      color: var(--lav)
+    }
+
+    .navtag {
+      font-size: 11px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      padding: 9px 13px
+    }
+
+    .hero {
+      min-height: calc(100svh - 75px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 55px 20px 100px;
+      position: relative
+    }
+
+    .moon {
+      width: 98px;
+      height: 98px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #fff 0, #e8e0ff 25%, #b9a6ff 58%, #7860d6 100%);
+      box-shadow: 0 0 35px #c0a8ff66, 0 0 100px #a48bff26;
+      margin: 0 auto 32px;
+      position: relative
+    }
+
+    .moon:after {
+      content: "";
+      position: absolute;
+      inset: -10px;
+      border: 1px solid #c8b7ff3d;
+      border-radius: 50%;
+      animation: ring 8s linear infinite
+    }
+
+    @keyframes ring {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .24em;
+      font-size: 10px;
+      color: var(--blue);
+      margin-bottom: 18px
+    }
+
+    .hero h1 {
+      font: 500 clamp(42px, 7.8vw, 88px)/1.04 var(--serif);
+      letter-spacing: -.04em;
+      max-width: 900px;
+      margin: 0 auto 24px
+    }
+
+    .hero h1 em {
+      color: var(--lav);
+      font-weight: 500
+    }
+
+    .hero p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 15px;
+      max-width: 510px;
+      margin: 0 auto
+    }
+
+    .scroll-cue {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      color: #aaa4ce
+    }
+
+    .scroll-cue:after {
+      content: none
+    }
+
+    .section {
+      width: min(1000px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 100px 0
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 38px
+    }
+
+    .kicker {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: 10px;
+      margin-bottom: 14px
+    }
+
+    .section h2 {
+      font: 500 clamp(34px, 5vw, 54px)/1.13 var(--serif);
+      letter-spacing: -.025em;
+      margin: 0
+    }
+
+    .sub {
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 550px;
+      margin: 15px auto 0;
+      font-size: 14px
+    }
+
+    .letter-card {
+      max-width: 720px;
+      margin: auto;
+      padding: clamp(27px, 6vw, 58px);
+      border: 1px solid #c7a7ff35;
+      background: linear-gradient(135deg, #ffffff0d, #ffffff04);
+      border-radius: 24px;
+      box-shadow: 0 30px 100px #0003;
+      position: relative;
+      overflow: hidden
+    }
+
+    .letter-card:before {
+      content: "✦";
+      position: absolute;
+      right: 28px;
+      top: 18px;
+      color: #c7a7ff77;
+      font-size: 24px
+    }
+
+    .letter-top {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .19em;
+      color: var(--blue);
+      margin-bottom: 27px
+    }
+
+    .letter-card h3 {
+      font: 500 clamp(27px, 4vw, 38px)/1.2 var(--serif);
+      margin: 0 0 23px
+    }
+
+    .letter-card p {
+      font: 16px/1.95 var(--serif);
+      color: #e1dbf5;
+      margin: 0 0 17px
+    }
+
+    .signature {
+      font: italic 23px var(--serif);
+      color: var(--lav);
+      margin-top: 30px
+    }
+
+    .music-card {
+      max-width: 640px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--glass);
+      padding: 20px
+    }
+
+    .album {
+      width: 88px;
+      height: 88px;
+      flex: 0 0 88px;
+      border-radius: 15px;
+      background: radial-gradient(circle at 35% 30%, #bba9ff, #5d55aa 45%, #17294e 85%);
+      display: grid;
+      place-items: center;
+      font-size: 32px;
+      box-shadow: inset 0 0 35px #fff2
+    }
+
+    .music-info {
+      flex: 1;
+      min-width: 0
+    }
+
+    .music-info small {
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--blue)
+    }
+
+    .music-info h3 {
+      font: 500 24px var(--serif);
+      margin: 7px 0 4px
+    }
+
+    .music-info p {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0
+    }
+
+    .play {
+      border: 1px solid #c7a7ff66;
+      background: #c7a7ff1a;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      flex: 0 0 50px;
+      font-size: 18px;
+      transition: .2s
+    }
+
+    .play:hover {
+      background: #c7a7ff35;
+      transform: scale(1.04)
+    }
+
+    .music-note {
+      color: var(--muted);
+      font-size: 11px;
+      text-align: center;
+      margin-top: 14px
+    }
+
+    .count-wrap {
+      max-width: 760px;
+      margin: auto;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: clamp(25px, 5vw, 45px);
+      text-align: center;
+      background: linear-gradient(145deg, #6c59a51b, #4f95cf0c)
+    }
+
+    .count-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: var(--blue)
+    }
+
+    .count-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 28px 0 15px
+    }
+
+    .count-unit {
+      padding: 19px 8px;
+      border: 1px solid #ffffff16;
+      background: #ffffff06;
+      border-radius: 15px
+    }
+
+    .count-unit strong {
+      font: 500 clamp(28px, 5vw, 45px) var(--serif);
+      display: block;
+      color: #f5efff
+    }
+
+    .count-unit span {
+      font-size: 9px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted)
+    }
+
+    .count-foot {
+      font: italic 17px var(--serif);
+      color: var(--lav);
+      margin-top: 15px
+    }
+
+    .memory-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px
+    }
+
+    .memory {
+      aspect-ratio: 4/5;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(160deg, #6f5a9b, #202e57 55%, #101326);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px
+    }
+
+    .memory:nth-child(2) {
+      background: linear-gradient(160deg, #263b66, #7067a2 60%, #14152b)
+    }
+
+    .memory:nth-child(3) {
+      background: linear-gradient(160deg, #54436f, #293c64 60%, #0c1026)
+    }
+
+    .memory:before {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border: 1px solid #ffffff35;
+      border-radius: 50%;
+      box-shadow: 0 0 0 22px #ffffff08, 0 0 0 48px #ffffff05
+    }
+
+    .memory-content {
+      position: relative
+    }
+
+    .memory .symbol {
+      font-size: 36px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 15px #fff5)
+    }
+
+    .memory h3 {
+      font: 500 25px var(--serif);
+      margin: 0 0 10px
+    }
+
+    .memory p {
+      font-size: 11px;
+      line-height: 1.7;
+      color: #e2def3;
+      margin: 0
+    }
+
+    .hug-box {
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
+      border: 1px solid #c7a7ff3b;
+      border-radius: 25px;
+      padding: clamp(30px, 6vw, 60px) 25px;
+      background: radial-gradient(ellipse at 50% 0%, #7f65c322, transparent 70%), #ffffff05
+    }
+
+    .hug-icon {
+      font-size: 55px;
+      display: block;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 25px #a88aff5a)
+    }
+
+    .hug-box h3 {
+      font: 500 clamp(29px, 4vw, 40px) var(--serif);
+      margin: 0 0 13px
+    }
+
+    .hug-box p {
+      max-width: 440px;
+      margin: 0 auto 25px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8
+    }
+
+    .primary {
+      border: 0;
+      border-radius: 99px;
+      background: linear-gradient(110deg, #b9a2ff, #89c6ff);
+      color: #101025;
+      padding: 14px 22px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      box-shadow: 0 8px 30px #8c7dff24;
+      transition: .2s
+    }
+
+    .primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px #8c7dff40
+    }
+
+    .hug-message {
+      display: none;
+      max-width: 430px;
+      margin: 25px auto 0;
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid #c7a7ff45;
+      background: #c7a7ff0c;
+      font: italic 20px/1.6 var(--serif);
+      color: #e7dcff
+    }
+
+    .hug-message.show {
+      display: block;
+      animation: appear .7s both
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(10px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    .footer {
+      text-align: center;
+      padding: 55px 20px 35px;
+      border-top: 1px solid #ffffff12;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 2
+    }
+
+    .footer .brand {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 12px
+    }
+
+    .footer .heart {
+      color: #c7a7ff
+    }
+
+    .tiny {
+      font-size: 10px;
+      color: #8884a8;
+      margin-top: 12px
+    }
+
+    .float-heart {
+      position: fixed;
+      bottom: -30px;
+      z-index: 5;
+      pointer-events: none;
+      animation: floatUp 3s ease-out forwards;
+      color: #c7a7ff;
+      font-size: 20px;
+      text-shadow: 0 0 15px #b7a0ff
+    }
+
+    @keyframes floatUp {
+      to {
+        transform: translateY(-100vh) rotate(20deg);
+        opacity: 0
+      }
+    }
+
+    /* Page-by-page interactive love story */
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      min-height: 100vh
+    }
+
+    .hero {
+      min-height: calc(100svh - 75px);
+      transition: opacity .45s, transform .45s
+    }
+
+    .scroll-cue {
+      border: 0;
+      background: none;
+      font: inherit;
+      cursor: pointer
+    }
+
+    .scroll-cue span {
+      display: block;
+      font-size: 22px;
+      margin-top: 8px;
+      color: var(--lav)
+    }
+
+    .story-page {
+      display: none;
+      min-height: calc(100svh - 115px);
+      padding-top: clamp(44px, 8vh, 90px);
+      padding-bottom: clamp(85px, 12vh, 130px);
+      animation: pageIn .55s ease both
+    }
+
+    .story-page.active {
+      display: block
+    }
+
+    .story-page.leaving {
+      animation: pageOut .22s ease both
+    }
+
+    @keyframes pageIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes pageOut {
+      to {
+        opacity: 0;
+        transform: translateY(-8px)
+      }
+    }
+
+    .story-controls {
+      position: fixed;
+      z-index: 20;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(14px, 4vw, 42px);
+      padding: 14px 18px calc(14px + env(safe-area-inset-bottom));
+      background: linear-gradient(180deg, transparent, #08091beF 28%);
+      backdrop-filter: blur(8px)
+    }
+
+    .step-btn {
+      border: 1px solid #ffffff24;
+      background: #ffffff09;
+      border-radius: 999px;
+      padding: 11px 16px;
+      font-size: 12px;
+      color: #e9e2ff;
+      transition: .2s
+    }
+
+    .step-btn:hover:not(:disabled) {
+      border-color: #c7a7ff88;
+      background: #c7a7ff17;
+      transform: translateY(-1px)
+    }
+
+    .step-btn:disabled {
+      opacity: .25;
+      cursor: default
+    }
+
+    .step-count {
+      font-size: 11px;
+      letter-spacing: .12em;
+      color: #e9e2ff;
+      white-space: nowrap
+    }
+
+    .step-count span {
+      color: #777292
+    }
+
+    .page-dots {
+      display: flex;
+      gap: 9px;
+      align-items: center
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border: 0;
+      padding: 0;
+      border-radius: 99px;
+      background: #ffffff45;
+      transition: width .25s, background .25s;
+      cursor: pointer
+    }
+
+    .dot.active {
+      width: 23px;
+      background: linear-gradient(90deg, #b9a2ff, #89c6ff)
+    }
+
+    #top {
+      transition: opacity .4s, transform .4s
+    }
+
+    .hero.intro-hidden {
+      display: none
+    }
+
+    .music-card {
+      transition: border-color .3s, box-shadow .3s
+    }
+
+    .music-card.is-playing {
+      border-color: #c7a7ff88;
+      box-shadow: 0 0 45px #9e86ff17
+    }
+
+    .music-card.is-playing .album {
+      animation: albumPulse 2s ease-in-out infinite alternate
+    }
+
+    @keyframes albumPulse {
+      to {
+        box-shadow: 0 0 35px #c7a7ff6b, inset 0 0 35px #fff3;
+        transform: scale(1.025)
+      }
+    }
+
+    .memory {
+      cursor: pointer;
+      transition: transform .25s, border-color .25s;
+      min-height: 180px
+    }
+
+    .memory:hover,
+    .memory:focus-visible {
+      transform: translateY(-4px);
+      border-color: #c7a7ff8a;
+      outline: none
+    }
+
+    .memory .memory-extra {
+      display: none;
+      margin-top: 12px;
+      font: italic 15px/1.6 var(--serif);
+      color: #fff
+    }
+
+    .memory.revealed .memory-extra {
+      display: block;
+      animation: appear .35s both
+    }
+
+    .memory.revealed .memory-content>p {
+      display: none
+    }
+
+    .memory.revealed:after {
+      content: '♡ tap to close';
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+      right: 0;
+      font-size: 9px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #ffffff9c
+    }
+
+    .memory .memory-content {
+      z-index: 1
+    }
+
+    .hug-message.show {
+      display: block
+    }
+
+    .moon {
+      cursor: pointer;
+      transition: transform .4s
+    }
+
+    .moon:focus-visible {
+      outline: 2px solid var(--lav);
+      outline-offset: 8px
+    }
+
+    .moon.moon-loved {
+      transform: scale(1.08);
+      box-shadow: 0 0 55px #c0a8ff99, 0 0 130px #a48bff4c
+    }
+
+    .letter-card {
+      transition: transform .3s
+    }
+
+    .letter-card.opened {
+      box-shadow: 0 30px 110px #8c7dff1a, 0 0 0 1px #c7a7ff22
+    }
+
+    .letter-hint {
+      font-size: 10px;
+      letter-spacing: .1em;
+      color: #a6a0c6;
+      text-align: center;
+      margin-top: 15px
+    }
+
+    .footer {
+      padding-bottom: 105px
+    }
+
+    .music-note {
+      min-height: 18px
+    }
+
+    .music-note.playing {
+      color: var(--lav);
+      animation: appear .3s both
+    }
+
+    @media(max-width:620px) {
+      .story-controls {
+        gap: 12px;
+        padding-left: 10px;
+        padding-right: 10px
+      }
+
+      .step-btn {
+        padding: 10px 12px
+      }
+
+      .step-btn span {
+        font-size: 11px
+      }
+
+      .page-dots {
+        gap: 7px
+      }
+
+      .dot {
+        width: 6px;
+        height: 6px
+      }
+
+      .dot.active {
+        width: 18px
+      }
+
+      .story-page {
+        min-height: calc(100svh - 95px);
+        padding-top: 42px;
+        padding-bottom: 95px
+      }
+
+      .footer {
+        padding-bottom: 100px
+      }
+    }
+
+    @media(max-width:620px) {
+      .nav {
+        width: calc(100% - 30px);
+        padding: 20px 0
+      }
+
+      .hero {
+        min-height: calc(88svh - 50px);
+        padding: 45px 20px 80px
+      }
+
+      .moon {
+        width: 78px;
+        height: 78px;
+        margin-bottom: 27px
+      }
+
+      .hero p {
+        font-size: 14px
+      }
+
+      .section {
+        width: calc(100% - 30px);
+        padding: 70px 0
+      }
+
+      .music-card {
+        gap: 13px;
+        padding: 14px
+      }
+
+      .album {
+        width: 65px;
+        height: 65px;
+        flex-basis: 65px;
+        font-size: 26px
+      }
+
+      .music-info h3 {
+        font-size: 20px
+      }
+
+      .play {
+        width: 43px;
+        height: 43px;
+        flex-basis: 43px
+      }
+
+      .count-grid {
+        gap: 6px
+      }
+
+      .count-unit {
+        padding: 15px 3px
+      }
+
+      .count-unit span {
+        font-size: 8px
+      }
+
+      .memory-grid {
+        grid-template-columns: 1fr;
+        gap: 12px
+      }
+
+      .memory {
+        aspect-ratio: 16/9
+      }
+
+      .memory:before {
+        width: 110px;
+        height: 110px
+      }
+
+      .memory .symbol {
+        font-size: 27px;
+        margin-bottom: 10px
+      }
+
+      .memory h3 {
+        font-size: 23px
+      }
+
+      .memory p {
+        max-width: 250px;
+        margin: auto
+      }
+
+      .letter-card p {
+        font-size: 15px
+      }
+
+      .navtag {
+        font-size: 9px;
+        padding: 8px 10px
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      *,
+      *:before,
+      *:after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="stars"></div>
+  <div class="orb"></div>
+  <div class="orb two"></div>
+  <div class="site">
+    <nav class="nav"><a class="brand" href="#top" id="brandHome">CHERI<span>VELLE</span></a>
+      <div class="navtag">A little love across the miles</div>
+    </nav>
+    <header class="hero" id="top">
+      <div><button class="moon" id="moonBtn" type="button" aria-label="Send a little wish to the moon"></button>
+        <div class="eyebrow">For the one who feels like home</div>
+        <h1>Even miles away,<br><em>you're right here.</em></h1>
+        <p>Somehow, the same moon watches over us both. Until I can hold your hand again, let this little corner of the
+          universe hold all the words I wish I could whisper to you.</p>
+      </div><button class="scroll-cue" id="beginBtn" type="button">Begin our story<span>↓</span></button>
+    </header>
+    <main>
+      <section class="section story-page active" id="letter" data-page="1">
+        <div class="section-head">
+          <div class="kicker">Open when you miss me</div>
+          <h2>A letter from my heart</h2>
+          <p class="sub">For the quiet nights, the long calls, and every moment I wish you were here.</p>
+        </div>
+        <article class="letter-card">
+          <div class="letter-top">✦ A little something, just for you</div>
+          <h3>My favourite person,</h3>
+          <p>If I could borrow the wind tonight, I'd ask it to carry the warmth of my hug straight to you.</p>
+          <p>I miss the little things most — the conversations that go nowhere and everywhere, the sound of your laugh,
+            and the comfort of knowing you're just one message away. Distance makes the days feel longer, but it has
+            never made my feelings smaller.</p>
+          <p>Until the day there's no screen between us and no goodbye at the end of a call, remember this: you are
+            loved on your ordinary days, on your difficult days, and in every tiny moment in between.</p>
+          <p>We're not just waiting for a day on the calendar. We're building a story worth every mile.</p>
+          <div class="signature">Always yours, under the same sky ✧</div>
+        </article>
+        <div class="letter-hint">A letter written under the same sky ✧</div>
+      </section>
+      <section class="section story-page" id="song" data-page="2">
+        <div class="section-head">
+          <div class="kicker">Press play, think of us</div>
+          <h2>Our little soundtrack</h2>
+          <p class="sub">For the song that makes the distance disappear for a few minutes.</p>
+        </div>
+        <div class="music-card">
+          <div class="album" aria-hidden="true">♫</div>
+          <div class="music-info"><small>Our song</small>
+            <h3>Sailor Song</h3>
+            <p>Gigi Perez · A little piece of us</p>
+          </div><button class="play" id="playBtn" aria-label="Play or pause song">▶</button>
+        </div>
+        <div class="music-note" id="musicNote" aria-live="polite">♫ &nbsp; a song for the miles between us</div><audio
+  id="songAudio"
+  src="Gigi-Perez-Sailor Song (Official Music Video).mp3"
+  preload="metadata">
+</audio>
+      </section>
+      <section class="section story-page" id="countdown" data-page="3">
+        <div class="section-head">
+          <div class="kicker">One day closer</div>
+          <h2>Until I see you again</h2>
+          <p class="sub">Every sunrise brings us one step closer to the hug we've been saving.</p>
+        </div>
+        <div class="count-wrap">
+          <div class="count-label">Counting down to our next hello</div>
+          <div class="count-grid">
+            <div class="count-unit"><strong id="days">—</strong><span>Days</span></div>
+            <div class="count-unit"><strong id="hours">—</strong><span>Hours</span></div>
+            <div class="count-unit"><strong id="minutes">—</strong><span>Minutes</span></div>
+            <div class="count-unit"><strong id="seconds">—</strong><span>Seconds</span></div>
+          </div>
+          <div class="count-foot" id="countMessage">The best part is that we're getting closer. ✨</div>
+        </div>
+      </section>
+      <section class="section story-page" id="memories" data-page="4">
+        <div class="section-head">
+          <div class="kicker">Little moments, big feelings</div>
+          <h2>Our kind of forever</h2>
+          <p class="sub">A few reminders that love lives in the little things, too.</p>
+        </div>
+        <div class="memory-grid">
+          <article class="memory" tabindex="0" role="button" aria-expanded="false">
+            <div class="memory-content">
+              <div class="symbol">☾</div>
+              <h3>Late-night talks</h3>
+              <p>When “five more minutes” somehow became two hours.</p>
+              <div class="memory-extra">If I could replay one sound tonight, it would be your sleepy voice saying, “stay
+                a little longer.”</div>
+            </div>
+          </article>
+          <article class="memory" tabindex="0" role="button" aria-expanded="false">
+            <div class="memory-content">
+              <div class="symbol">✧</div>
+              <h3>Our tiny rituals</h3>
+              <p>Good morning texts, sleepy calls, and the little things that are only ours.</p>
+              <div class="memory-extra">A tiny message from you can turn an ordinary day into my favourite one.</div>
+            </div>
+          </article>
+          <article class="memory" tabindex="0" role="button" aria-expanded="false">
+            <div class="memory-content">
+              <div class="symbol">♡</div>
+              <h3>The next hello</h3>
+              <p>The hug we're going to hold onto just a little longer.</p>
+              <div class="memory-extra">One day, “I miss you” will become “I’m right here.” Until then, this is what
+                we’re moving toward.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section story-page" id="hug" data-page="5">
+        <div class="hug-box"><span class="hug-icon" aria-hidden="true">🫂</span>
+          <div class="kicker">A hug, sent through the stars</div>
+          <h3>Close your eyes for a second.</h3>
+          <p>Imagine my arms around you. No time zones, no distance, no “I wish you were here.” Just us, exactly where
+            we belong.</p><button class="primary" id="hugBtn">Send me a virtual hug ✨</button>
+          <div class="hug-message" id="hugMessage">Breathe in. Hold on. Breathe out. That was me, reminding you that
+            you're never as far from my heart as the map says. ♡</div>
+        </div>
+      </section>
+    </main>
+    <div class="story-controls" id="storyControls"><button class="step-btn" id="prevBtn" type="button"
+        aria-label="Previous page">← <span>Back</span></button>
+      <div class="page-dots" id="pageDots" aria-label="Story pages"><button class="dot active" data-go="1"
+          aria-label="Page 1"></button><button class="dot" data-go="2" aria-label="Page 2"></button><button class="dot"
+          data-go="3" aria-label="Page 3"></button><button class="dot" data-go="4" aria-label="Page 4"></button><button
+          class="dot" data-go="5" aria-label="Page 5"></button></div>
+      <div class="step-count" id="stepCount">01 <span>/ 05</span></div><button class="step-btn next" id="nextBtn"
+        type="button"> <span>Next</span> →</button>
+    </div>
+    <footer class="footer"><a class="brand" href="#top">CHERI<span>VELLE</span></a>
+      <div>Made of stardust, soft words, and a love that travels. <span class="heart">♥</span></div>
+    </footer>
+  </div>
+  <script>
+    (() => {
+      const pages = [...document.querySelectorAll('.story-page')];
+      const hero = document.getElementById('top');
+      const dots = [...document.querySelectorAll('.dot')];
+      const prev = document.getElementById('prevBtn');
+      const next = document.getElementById('nextBtn');
+      const count = document.getElementById('stepCount');
+      let current = 0;
+      function showPage(n, scroll = true) {
+        n = Math.max(0, Math.min(pages.length, n));
+        current = n;
+        hero.classList.toggle('intro-hidden', n !== 0);
+        pages.forEach((p, i) => p.classList.toggle('active', n === i + 1));
+        dots.forEach((d, i) => d.classList.toggle('active', n === i + 1));
+        prev.disabled = n === 0;
+        next.disabled = n === pages.length;
+        next.querySelector('span').textContent = n === pages.length ? 'The end' : 'Next';
+        count.innerHTML = (n === 0 ? '00' : String(n).padStart(2, '0')) + ' <span>/ 05</span>';
+        if (scroll) window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      document.getElementById('beginBtn').addEventListener('click', () => showPage(1));
+      prev.addEventListener('click', () => showPage(current - 1));
+      next.addEventListener('click', () => showPage(current + 1));
+      dots.forEach(d => d.addEventListener('click', () => showPage(Number(d.dataset.go))));
+      document.getElementById('brandHome').addEventListener('click', e => { e.preventDefault(); showPage(0) });
+      document.querySelectorAll('.footer .brand').forEach(a => a.addEventListener('click', e => { e.preventDefault(); showPage(0) }));
+      document.addEventListener('keydown', e => { if (e.key === 'ArrowRight' && current < pages.length) showPage(current + 1); if (e.key === 'ArrowLeft' && current > 0) showPage(current - 1) });
+
+      const audio = document.getElementById('songAudio'), playBtn = document.getElementById('playBtn'), note = document.getElementById('musicNote'), musicCard = document.querySelector('.music-card');
+      function syncAudio() { const playing = !audio.paused; playBtn.textContent = playing ? 'Ⅱ' : '▶'; playBtn.setAttribute('aria-label', playing ? 'Pause song' : 'Play song'); musicCard.classList.toggle('is-playing', playing); note.textContent = playing ? '♪  playing just for us ♡' : '♫  a song for the miles between us'; note.classList.toggle('playing', playing) }
+      playBtn.addEventListener('click', async () => { if (audio.paused) { try { await audio.play(); syncAudio() } catch (e) { playBtn.textContent = '▶'; musicCard.classList.remove('is-playing'); note.textContent = '♫  keep this little moment close ♡'; note.classList.remove('playing') } } else { audio.pause(); syncAudio() } });
+      audio.addEventListener('play', syncAudio); audio.addEventListener('pause', syncAudio); audio.addEventListener('ended', syncAudio);
+
+      // Set the reunion date for this ready-made story.
+      const REUNION_DATE = '2027-02-14T18:00:00';
+      function updateCountdown() { const target = new Date(REUNION_DATE).getTime(), diff = target - Date.now(); if (diff <= 0) { ['days', 'hours', 'minutes', 'seconds'].forEach(id => document.getElementById(id).textContent = '00'); document.getElementById('countMessage').textContent = 'The day is here. Go get that hug. ♡'; return } const vals = { days: Math.floor(diff / 86400000), hours: Math.floor(diff % 86400000 / 3600000), minutes: Math.floor(diff % 3600000 / 60000), seconds: Math.floor(diff % 60000 / 1000) }; Object.entries(vals).forEach(([id, v]) => document.getElementById(id).textContent = String(v).padStart(2, '0')) }
+      updateCountdown(); setInterval(updateCountdown, 1000);
+      const hugBtn = document.getElementById('hugBtn'), hugMessage = document.getElementById('hugMessage');
+      hugBtn.addEventListener('click', () => { const opened = hugMessage.classList.toggle('show'); hugBtn.textContent = opened ? 'Send another hug ♡' : 'Send me a virtual hug ✨'; if (opened) { for (let i = 0; i < 18; i++) { const h = document.createElement('span'); h.className = 'float-heart'; h.textContent = ['♡', '✦', '♥', '✧'][i % 4]; h.style.left = (8 + Math.random() * 84) + 'vw'; h.style.animationDelay = (Math.random() * .9) + 's'; document.body.appendChild(h); setTimeout(() => h.remove(), 4000) } } });
+      document.querySelectorAll('.memory').forEach(card => { const toggle = () => { const on = card.classList.toggle('revealed'); card.setAttribute('aria-expanded', String(on)) }; card.addEventListener('click', toggle); card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle() } }) });
+      const moon = document.getElementById('moonBtn'); moon.addEventListener('click', () => { moon.classList.toggle('moon-loved'); if (moon.classList.contains('moon-loved')) { for (let i = 0; i < 7; i++) { const h = document.createElement('span'); h.className = 'float-heart'; h.textContent = '✦'; h.style.left = (35 + Math.random() * 30) + 'vw'; h.style.animationDelay = (Math.random() * .5) + 's'; document.body.appendChild(h); setTimeout(() => h.remove(), 4000) } } });
+      document.querySelector('.letter-card').addEventListener('click', e => { e.currentTarget.classList.toggle('opened') });
+      showPage(0, false);
+    })();
+  </script>
+</body>
+
+</html>
